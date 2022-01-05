@@ -1,0 +1,7 @@
+{/* {this.state.education.map((data, fields) => {
+                return (
+                  <>
+                  
+                  </>
+                )
+              })} */}
