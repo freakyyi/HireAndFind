@@ -379,7 +379,20 @@ const CardComponent = (props) => {
         >
           <Card.Body>
             <Card.Title style={{ color: "black" }}>
-              {data.Name && data.Name}
+            <a
+                href={data.link}
+                target="_blank"
+                rel="noreferrer"
+                class="mb-0"
+                style={{
+                  color: "#55BC7E",
+                  fontSize: "18px",
+                  marginBottom: "10px",
+                  fontWeight: "bold",
+                }}
+              >
+                {data.Name}
+              </a>
             </Card.Title>
 
             <Card.Text>
