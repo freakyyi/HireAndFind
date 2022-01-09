@@ -46,7 +46,6 @@ class JobDetails extends React.Component {
         this.state.skills !== null
       ) {
         console.log("im in post job");
-        let skills = this.state.skills.split(",");
 
         let results = await requests.updateJob(
           this.state.company,
@@ -59,11 +58,11 @@ class JobDetails extends React.Component {
           this.state.upperSalary,
           this.state.lowerSalary,
           this.state.description,
-          skills,
+          this.state.skills,
           this.state.jobId
         );
 
-        if (results === null || results === undefined) {
+        if (results === null) {
           document.getElementById("error").style.display = "block";
           console.log("Please fill in the required details", results);
         } else {

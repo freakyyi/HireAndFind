@@ -27,7 +27,7 @@ const Flag = (props) => {
   };
   return (
     <>
-      {newFlag && newFlag == 1 && currentUser === userId ? (
+      {newFlag && newFlag === 1 && currentUser === userId ? (
         <button
           type="button"
           className="btn btn-danger flagbtn"
@@ -35,7 +35,7 @@ const Flag = (props) => {
         >
           unFlag
         </button>
-      ) : newFlag && newFlag == 1 && currentUser !== userId ? (
+      ) : newFlag && newFlag === 1 && currentUser !== userId ? (
         <>
           <button
             disabled
