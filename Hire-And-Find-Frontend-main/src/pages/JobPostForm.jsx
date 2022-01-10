@@ -149,7 +149,7 @@ class JobPostForm extends Component {
           skills
         );
 
-        if (results === null || results === undefined) {
+        if (results === null) {
           document.getElementById("error").style.display = "block";
           console.log("Please fill in the required details", results);
         } else {

@@ -100,28 +100,33 @@ class ViewProfile extends Component {
   }
 
   setStreet(e) {
+    this.state.updateBody.street = e.target.value;
     this.setState({
       street: e.target.value,
     });
   }
   setCity(e) {
+    this.state.updateBody.city = e.target.value;
     this.setState({
       city: e.target.value,
     });
   }
 
   setPState(e) {
+    this.state.updateBody.stateP = e.target.value;
     this.setState({
       stateP: e.target.value,
     });
   }
 
   setCountry(e) {
+    this.state.updateBody.country = e.target.value;
     this.setState({
       country: e.target.value,
     });
   }
   setZipcode(e) {
+    this.state.updateBody.setZipcode = e.target.value;
     this.setState({
       zipcode: e.target.value,
     });
@@ -169,8 +174,8 @@ class ViewProfile extends Component {
               email: results.data.roleDetails.email,
               role: results.data.roleDetails.role,
               phone_number: results.data.roleDetailsSpecified.phone_number,
-              headline: results.data.roleDetailsSpecified.headline,
-              company: results.data.roleDetailsSpecified.company,
+              headlineR: results.data.roleDetailsSpecified.headline,
+              companyR: results.data.roleDetailsSpecified.company,
               zipcode: zipcode,
               city: city,
               stateP: state,
@@ -184,8 +189,8 @@ class ViewProfile extends Component {
               email: results.data.roleDetails.email,
               role: results.data.roleDetails.role,
               phone_number: results.data.roleDetailsSpecified.phone_number,
-              headline: results.data.roleDetailsSpecified.headline,
-              company: results.data.roleDetailsSpecified.company,
+              headlineR: results.data.roleDetailsSpecified.headline,
+              companyR: results.data.roleDetailsSpecified.company,
               zipcode: zipcode,
               city: city,
               stateP: state,
@@ -574,7 +579,7 @@ class ViewProfile extends Component {
                                 border: "1px solid #55BC7E",
                                 background: "none",
                               }}
-                              placeholder={this.state.headline}
+                              placeholder={this.state.headlineR}
                               onChange={(e) => {
                                 this.setTagline(e);
                               }}
@@ -596,7 +601,7 @@ class ViewProfile extends Component {
                                 border: "1px solid #55BC7E",
                                 background: "none",
                               }}
-                              placeholder={this.state.company}
+                              placeholder={this.state.companyR}
                               onChange={(e) => {
                                 this.setCompany(e);
                               }}

@@ -264,7 +264,7 @@ class Scrapping extends Component {
               marginBottom: "20px",
             }}
           >
-            No Professors are Available at this time
+            No Jobs are Available at this time
           </p>
           {/* <div class="row">
             <div class="col-lg-2"></div>

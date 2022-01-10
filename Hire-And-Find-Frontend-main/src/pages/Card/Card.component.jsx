@@ -379,6 +379,7 @@ const CardComponent = (props) => {
         >
           <Card.Body>
             <Card.Title style={{ color: "black" }}>
+            
             <a
                 href={data.link}
                 target="_blank"
@@ -391,7 +392,7 @@ const CardComponent = (props) => {
                   fontWeight: "bold",
                 }}
               >
-                {data.Name}
+                {data.Name && data.Name}
               </a>
             </Card.Title>
 

@@ -46,7 +46,9 @@ class JobDetails extends React.Component {
         this.state.skills !== null
       ) {
         console.log("im in post job");
-
+        console.log("im in post job", this.state.skills);
+        let skills = this.state.skills.split(",");
+        console.log("im in post job skills", skills);
         let results = await requests.updateJob(
           this.state.company,
           this.state.title,
@@ -58,7 +60,7 @@ class JobDetails extends React.Component {
           this.state.upperSalary,
           this.state.lowerSalary,
           this.state.description,
-          this.state.skills,
+          skills,
           this.state.jobId
         );
 
@@ -408,6 +410,7 @@ class JobDetails extends React.Component {
                             type="radio"
                             value="Yes"
                             name="jobPrimer"
+                            checked={this.state.jobPrimer === "Yes"}
                           />{" "}
                           Yes
                           <input
@@ -415,6 +418,7 @@ class JobDetails extends React.Component {
                             type="radio"
                             value="No"
                             name="jobPrimer"
+                            checked={this.state.jobPrimer === "No"}
                           />{" "}
                           No
                         </div>
@@ -477,6 +481,9 @@ class JobDetails extends React.Component {
                               type="radio"
                               value="Temporarily"
                               name="contractType"
+                              checked={
+                                this.state.contractType === "Temporarily"
+                              }
                             />{" "}
                             Temporarily
                             <input
@@ -484,6 +491,7 @@ class JobDetails extends React.Component {
                               type="radio"
                               value="Internship"
                               name="contractType"
+                              checked={this.state.contractType === "Internship"}
                             />{" "}
                             Internship
                           </div>
@@ -640,6 +648,7 @@ class JobDetails extends React.Component {
     }
   };
   render() {
+    console.log("this.state.jobPrimer", this.state.jobPrimer);
     return (
       <>
         <div className="page-header">

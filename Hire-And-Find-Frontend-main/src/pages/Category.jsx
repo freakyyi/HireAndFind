@@ -355,8 +355,8 @@ class Category extends React.Component {
                           name="categories"
                           value=""
                           id="flexCheckDefault"
-                          checked={this.state.category === "Education"}
-                          onChange={this.handleChange("Education")}
+                          checked={this.state.category === "Edcuation"}
+                          onChange={this.handleChange("Edcuation")}
                         />
                       </div>
                     </div>
